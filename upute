@@ -1,0 +1,9 @@
+sbin/stop-dfs.sh
+rm -r /tmp/hadoop-root/
+bin/hdfs namenode -format
+sbin/start-dfs.sh
+bin/hdfs dfs -mkdir /user
+bin/hdfs dfs -mkdir /user/root
+
+hadoop jar RZNU_2.dz/1.zad/NajposjecenijiServisi.jar NajposjecenijiServisi log out16
+hadoop fs -copyToLocal out16/part-00000 rznu/QUIZ/public/posjecenostst
